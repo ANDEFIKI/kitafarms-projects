@@ -9,43 +9,49 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa fa-users"></i> About</a></li>
+                <li><a href="services.html"><i class="fa fa-cogs"></i> Services</a></li>
+                <li><a href="products.html" class="active"><i class="fa fa-box"></i> Products</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Our Products</h1>
-        <div class="products">
-            <div class="product-item">
-                <h2>Paddy Rice</h2>
-                <img src="images/paddy-rice.jpg" alt="Paddy Rice" style="width:200px;">
-                <p>High-quality paddy rice for distribution.</p>
+        <section class="products-section">
+            <h1><i class="fa fa-box"></i> Our Products</h1>
+            <div class="products-grid">
+                <div class="product-card" data-product="Paddy Rice">
+                    <img src="images/rice.jpg" alt="Paddy Rice">
+                    <h3>Paddy Rice</h3>
+                    <p>High-quality paddy rice for distribution.</p>
+                    <button class="view-product-btn">View Details</button>
+                </div>
+                <div class="product-card" data-product="Maize">
+                    <img src="images/maize.jpg" alt="Maize">
+                    <h3> Maize</h3>
+                    <p>Fresh maize available for bulk purchase.</p>
+                    <button class="view-product-btn">View Details</button>
+                </div>
+                <div class="product-card" data-product="Soybeans">
+                    <img src="images/image.png" alt="Soybeans">
+                    <h3><i class="fa fa-leaf"></i> Soybeans</h3>
+                    <p>Premium soybeans for your needs.</p>
+                    <button class="view-product-btn">View Details</button>
+                </div>
+                <div class="product-card" data-product="Sesame">
+                    <img src="images/sesame.jpg" alt="Sesame">
+                    <h3><i class="fa fa-seedling"></i> Sesame</h3>
+                    <p>Quality sesame seeds for distribution.</p>
+                    <button class="view-product-btn">View Details</button>
+                </div>
             </div>
-            <div class="product-item">
-                <h2>Maize</h2>
-                <img src="images/maize.jpg" alt="Maize" style="width:200px;">
-                <p>Fresh maize available for bulk purchase.</p>
-            </div>
-            <div class="product-item">
-                <h2>Soybeans</h2>
-                <img src="images/soybeans.jpg" alt="Soybeans" style="width:200px;">
-                <p>Premium soybeans for your needs.</p>
-            </div>
-            <div class="product-item">
-                <h2>Sesame</h2>
-                <img src="images/sesame.jpg" alt="Sesame" style="width:200px;">
-                <p>Quality sesame seeds for distribution.</p>
-            </div>
-        </div>
+        </section>
     </main>
     <section class="social-contact-section">
-        <h2>Connect with Us</h2>
+        <h2><i class="fa fa-share-alt"></i> Connect with Us</h2>
         <ul class="social-list">
             <li>
                 <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="social-link linkedin">

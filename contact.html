@@ -9,30 +9,30 @@
     </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa fa-users"></i> About</a></li>
+                <li><a href="services.html"><i class="fa fa-cogs"></i> Services</a></li>
+                <li><a href="products.html"><i class="fa fa-box"></i> Products</a></li>
+                <li><a href="contact.html" class="active"><i class="fa fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Contact Us</h1>
+        <h1><i class="fa fa-envelope"></i> Contact Us</h1>
         <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required> <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required> <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea> <br>
-            <button type="submit">Send</button>
+            <label for="name"><i class="fa fa-user"></i> Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email"><i class="fa fa-at"></i> Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message"><i class="fa fa-comment"></i> Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
         </form>
         <div id="formMessage"></div>
         <section class="social-contact-section">
-            <h2>Connect with Us</h2>
+            <h2><i class="fa fa-share-alt"></i> Connect with Us</h2>
             <ul class="social-list">
                 <li>
                     <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="social-link linkedin">

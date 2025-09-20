@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background: #f6fcfa;
+    background: linear-gradient(rgba(246,252,250,0.95), rgba(246,252,250,0.95)), url('/images/farming-bg.jpg') center center/cover no-repeat fixed;
     color: #256d5a;
 }
 
@@ -129,12 +129,12 @@ main {
 }
 footer {
     text-align: center;
-    padding: 1em 0;
+    padding: 0.2em 0;
     background: #e3f9f3;
     color: #256d5a;
     border-top: 2px solid #aee5d8;
-    position: fixed;
-    width: 100%;
+    position: relative;
+    width: 10%;
     bottom: 0;
 }
 /* Learn More Button Styling */
@@ -527,13 +527,14 @@ header {
 }
 footer {
     text-align: center;
-    padding: 1em 0;
+    padding: 0.3em 0;
     background: #e3f9f3;
     color: #256d5a;
     border-top: 2px solid #aee5d8;
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-size: 0.9em;
 }
 @media (max-width: 800px) {
     .main-nav {
