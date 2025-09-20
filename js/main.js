@@ -32,7 +32,7 @@
             }
         }
     }
-// Toggle menu for mobile (example)
+// Toggle menu for mobile (all pages)
 document.addEventListener('DOMContentLoaded', function() {
     // Grain order form interactivity for products.html
     var orderForm = document.getElementById('orderForm');
@@ -62,11 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    // Hamburger menu toggle for mobile nav
+    // Hamburger menu toggle for mobile nav (all pages)
     var hamburger = document.querySelector('.hamburger');
     var navList = document.querySelector('.nav-list');
     if (hamburger && navList) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
             navList.classList.toggle('active');
         });
         // Close nav when clicking outside (optional UX)
