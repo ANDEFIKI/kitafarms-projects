@@ -34,6 +34,34 @@
     }
 // Toggle menu for mobile (example)
 document.addEventListener('DOMContentLoaded', function() {
+    // Grain order form interactivity for products.html
+    var orderForm = document.getElementById('orderForm');
+    if (orderForm) {
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var grainType = document.getElementById('grainType').value;
+            var quantity = document.getElementById('quantity').value;
+            var orderMessage = document.getElementById('orderMessage');
+            if (!grainType || !quantity || quantity < 1) {
+                orderMessage.textContent = 'Please select a grain and enter a valid quantity.';
+                orderMessage.style.color = 'red';
+            } else {
+                // Send order via EmailJS
+                emailjs.send('service_a4n4kmp', 'template_us74ugn', {
+                    grain_type: grainType,
+                    quantity: quantity
+                })
+                .then(function(response) {
+                    orderMessage.textContent = 'Order sent! You will be contacted soon.';
+                    orderMessage.style.color = 'green';
+                    orderForm.reset();
+                }, function(error) {
+                    orderMessage.textContent = 'Failed to send order. Please try again.';
+                    orderMessage.style.color = 'red';
+                });
+            }
+        });
+    }
     // Hamburger menu toggle for mobile nav
     var hamburger = document.querySelector('.hamburger');
     var navList = document.querySelector('.nav-list');

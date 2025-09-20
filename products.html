@@ -49,6 +49,23 @@
                 </div>
             </div>
         </section>
+        <section class="order-section">
+            <h2><i class="fa fa-shopping-cart"></i> Order Grains</h2>
+            <form id="orderForm">
+                <label for="grainType">Select Grain:</label>
+                <select id="grainType" name="grainType" required>
+                    <option value="">--Choose Grain--</option>
+                    <option value="Paddy Rice">Paddy Rice</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Soybeans">Soybeans</option>
+                    <option value="Sesame">Sesame</option>
+                </select>
+                <label for="quantity">Quantity (bags):</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <button type="submit"><i class="fa fa-paper-plane"></i> Submit Order</button>
+            </form>
+            <div id="orderMessage"></div>
+        </section>
     </main>
     <section class="social-contact-section">
         <h2><i class="fa fa-share-alt"></i> Connect with Us</h2>
@@ -73,6 +90,13 @@
     <footer>
         <p>&copy; 2025 Grain Distribution Platform</p>
     </footer>
-    <script src="js/main.js"></script>
+        <!-- EmailJS SDK -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init('YOUR_EMAILJS_USER_ID'); // Replace with your EmailJS user ID
+            })();
+        </script>
+        <script src="js/main.js"></script>
 </body>
 </html>
