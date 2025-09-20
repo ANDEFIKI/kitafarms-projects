@@ -5,23 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - My Multi-Page Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="about.html" class="active"><i class="fa fa-users"></i> About</a></li>
+                <li><a href="services.html"><i class="fa fa-cogs"></i> Services</a></li>
+                <li><a href="products.html"><i class="fa fa-box"></i> Products</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-    <h1>About Us</h1>
-    <p>This platform is an e-commerce solution for the distribution of grains such as paddy rice, maize, soybeans, and sesame. We connect buyers and sellers for efficient and reliable transactions.</p>
+        <section class="about-hero">
+            <h1><i class="fa fa-leaf"></i> About Us</h1>
+            <p class="about-intro">This platform is an e-commerce solution for the distribution of grains like paddy rice, maize, soybeans, and sesame. We connect buyers and sellers for efficient and reliable transactions.</p>
+        </section>
+        <div class="about-cards">
+            <section class="about-section">
+                <h2><i class="fa fa-eye"></i> Vision</h2>
+                <p>To be the major producer and distributor of grains in Africa, known for innovation, sustainability, and community impact in farming.</p>
+            </section>
+            <section class="about-section">
+                <h2><i class="fa fa-bullseye"></i> Mission</h2>
+                <p>To empower farmers and ensure food security across Africa through innovative farming techniques and efficient grain distribution networks.</p>
+            </section>
+            <section class="about-section">
+                <h2><i class="fa fa-users"></i> Our Team</h2>
+                <p>We are a dedicated team of professionals passionate about agriculture and technology, working together to transform the grain distribution landscape in Africa.</p>
+                <div class="talents-grid">
+                    <div class="talent-card">
+                        <img src="images/official passport.jpg" alt="Talent 1">
+                        <h3>Andefiki John</h3>
+                        <p>Founder/CEO <br> Software Developer</p>
+                    </div>
+                    <div class="talent-card">
+                        <img src="images/patrick.jpg" alt="Talent 2">
+                        <h3>Patrick Attagurungu</h3>
+                        <p>Development Partner <br> AI Developer</p>
+                    </div>
+                    <div class="talent-card">
+                        <img src="images/haggai.png" alt="Talent 3">
+                        <h3>Rimamnuskep Haggai</h3>
+                        <p>Senior Marketer <br> Chief Financial Officer</p>
+                    </div>
+                </div>
+                <button class="view-talents-btn">View Talents on Homepage</button>
+            </section>
+        </div>
+        <section class="about-section about-history">
+            <h2><i class="fa fa-history"></i> Our History</h2>
+            <p>Founded in 2021, our platform has rapidly grown to become a trusted name in grain distribution, serving thousands of farmers and customers across the continent.</p>
+            <div class="about-story">
+                <h3>Kitafarms: Empowering African Agriculture</h3>
+                <ul>
+                    <li><strong>Climate-Smart Farming:</strong> Leveraging solar-powered irrigation for year-round farming and consistent grain supply.</li>
+                    <li><strong>Smart Distribution & E-commerce:</strong> Direct-to-consumer platform for fair prices and transparent food sourcing.</li>
+                </ul>
+                <h4>The Impact</h4>
+                <ul>
+                    <li><strong>Increased Production:</strong> Over 20 hectares cultivated, 3,000 bags of grains produced.</li>
+                    <li><strong>Community Empowerment:</strong> Supporting 500+ peasant farmers, youth, and displaced persons.</li>
+                    <li><strong>Building Resilience:</strong> Sustainable farming and digital innovation for a food-secure future.</li>
+                </ul>
+                <p class="about-essence">Kitafarms is not just a business; it's an ecosystem using technology to create a more equitable and food-secure future for all Africans.</p>
+            </div>
+        </section>
     </main>
+    </main>
+    <section class="social-contact-section">
+        <h2><i class="fa fa-share-alt"></i> Connect with Us</h2>
+        <ul class="social-list">
+            <li>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener" class="social-link facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </li>
+            <li>
+                <a href="mailto:yourname@gmail.com" class="social-link gmail">
+                    <i class="fas fa-envelope"></i> Gmail
+                </a>
+            </li>
+        </ul>
+    </section>
     <footer>
         <p>&copy; 2025 My Website</p>
     </footer>

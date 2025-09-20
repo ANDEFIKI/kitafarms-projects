@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Multi-Page Website</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - My Multi-Page Website</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
 <body>
     <header>
         <nav>
@@ -22,14 +23,34 @@
         <h1>Contact Us</h1>
         <form id="contactForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required> <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required> <br>
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" required></textarea> <br>
             <button type="submit">Send</button>
         </form>
         <div id="formMessage"></div>
+        <section class="social-contact-section">
+            <h2>Connect with Us</h2>
+            <ul class="social-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="social-link linkedin">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener" class="social-link facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:yourname@gmail.com" class="social-link gmail">
+                        <i class="fas fa-envelope"></i> Gmail
+                    </a>
+                </li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 My Website</p>

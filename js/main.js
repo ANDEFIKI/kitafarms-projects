@@ -8,6 +8,30 @@
             window.location.href = 'about.html?section=' + encodeURIComponent(aboutName);
         });
     }
+
+    // Make Talents section interactive between about.html and index.html
+    var talentsBtn = document.querySelector('.view-talents-btn');
+    if (talentsBtn) {
+        talentsBtn.addEventListener('click', function(e) {
+            // Navigate to index.html and scroll to talents section
+            window.location.href = 'index.html?section=talents';
+        });
+    }
+
+    // If coming from about.html, scroll to talents section on index.html
+    if (window.location.pathname.endsWith('index.html')) {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('section') === 'talents') {
+            var talentsSection = document.querySelector('.talents-section');
+            if (talentsSection) {
+                talentsSection.scrollIntoView({ behavior: 'smooth' });
+                talentsSection.classList.add('highlight-talent');
+                setTimeout(function() {
+                    talentsSection.classList.remove('highlight-talent');
+                }, 2000);
+            }
+        }
+    }
 // Toggle menu for mobile (example)
 document.addEventListener('DOMContentLoaded', function() {
     // Hamburger menu toggle for mobile nav

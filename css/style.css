@@ -1,3 +1,344 @@
+/* Highlight talents section when navigated from about.html */
+.highlight-talent {
+    box-shadow: 0 0 0 4px #38b2ac;
+    transition: box-shadow 0.5s;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    background: #f6fcfa;
+    color: #256d5a;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button, li, ul, nav, main, header, footer, .product-card, .story, .talent-card {
+    font-family: 'Inter', Arial, sans-serif;
+}
+header {
+    background: #e3f9f3;
+    color: #256d5a;
+    padding: 1em 0;
+    border-bottom: 2px solid #aee5d8;
+}
+.main-nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.hamburger {
+    display: none;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 0;
+    margin: 0;
+}
+.nav-list li a {
+    color: #256d5a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-list li a:hover {
+    background: #aee5d8;
+    color: #256d5a;
+}
+main {
+    max-width: 1100px;
+    margin: 2em auto;
+    background: #ffffff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(38, 166, 154, 0.08);
+    color: #256d5a;
+}
+.products-section {
+    margin-top: 2em;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2em;
+    margin-top: 1em;
+}
+.product-card {
+    background: #e3f9f3;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
+    padding: 1em;
+    text-align: center;
+    color: #256d5a;
+    border: 1px solid #aee5d8;
+}
+.product-card img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 6px;
+    margin-bottom: 0.5em;
+}
+.stories-section {
+    margin-top: 2em;
+}
+.stories-flex {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+.story {
+    background: #f6fcfa;
+    border-radius: 8px;
+    padding: 1em;
+    flex: 1 1 300px;
+    min-width: 220px;
+    color: #256d5a;
+    border: 1px solid #aee5d8;
+}
+.talents-section {
+    margin-top: 2em;
+}
+.talents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2em;
+    margin-top: 1em;
+}
+.talent-card {
+    background: #e3f9f3;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
+    padding: 1em;
+    text-align: center;
+    color: #256d5a;
+    border: 1px solid #aee5d8;
+}
+.talent-card img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #e3f9f3;
+    color: #256d5a;
+    border-top: 2px solid #aee5d8;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Learn More Button Styling */
+.view-service-btn, .view-about-btn, .view-product-btn {
+    background: #38b2ac;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
+}
+.view-service-btn:hover, .view-about-btn:hover, .view-product-btn:hover {
+    background: #256d5a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(38, 166, 154, 0.15);
+}
+/* Services Section */
+.service-card {
+    background: #e3f9f3;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
+    padding: 1em;
+    text-align: center;
+    color: #256d5a;
+    border: 1px solid #aee5d8;
+}
+/* About Section */
+.about-section {
+    margin-top: 2em;
+    background: #f6fcfa;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.05);
+    color: #256d5a;
+}
+.about-section h2 {
+    margin-top: 0;
+    color: #256d5a;
+}
+.about-section ul {
+    margin: 1em 0 0 1.5em;
+    padding: 0;
+    color: #256d5a;
+}
+.about-section ul li {
+    margin-bottom: 0.5em;
+    list-style: disc inside;
+    font-size: 1em;
+}
+/* Social Contact Section Styling */
+.social-contact-section {
+    margin-top: 2em;
+    background: #e3f9f3;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.05);
+    color: #256d5a;
+    text-align: center;
+}
+.social-contact-section h2 {
+    margin-top: 0;
+    color: #256d5a;
+}
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.1em;
+    color: #256d5a;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.social-link:hover {
+    background: #aee5d8;
+    color: #256d5a;
+}
+.social-link .fa-linkedin {
+    color: #0A66C2;
+}
+.social-link .fa-facebook {
+    color: #1877F3;
+}
+.social-link .fa-envelope {
+    color: #EA4335;
+}
+/* Contact Form Styling */
+#contactForm {
+    background: #e3f9f3;
+    border-radius: 8px;
+    padding: 2em 1.5em;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
+    max-width: 500px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+#contactForm label {
+    font-weight: 600;
+    color: #256d5a;
+    margin-bottom: 0.3em;
+}
+#contactForm input,
+#contactForm textarea {
+    border: 1px solid #aee5d8;
+    border-radius: 4px;
+    padding: 0.7em;
+    font-size: 1em;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #fff;
+    color: #256d5a;
+    resize: vertical;
+}
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #38b2ac;
+    box-shadow: 0 0 0 2px #aee5d8;
+}
+#contactForm button[type="submit"] {
+    background: #38b2ac;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
+    margin-top: 1em;
+}
+#contactForm button[type="submit"]:hover {
+    background: #256d5a;
+    box-shadow: 0 2px 8px rgba(38, 166, 154, 0.15);
+}
+#formMessage {
+    margin-top: 1em;
+    font-weight: 600;
+    text-align: center;
+}
+/* Social Contact Section Styling */
+.social-contact-section {
+    margin-top: 2em;
+    background: #f9fbff;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 1px 4px rgba(0,31,77,0.05);
+    color: #001f4d;
+    text-align: center;
+}
+.social-contact-section h2 {
+    margin-top: 0;
+    color: #001f4d;
+}
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.1em;
+    color: #001f4d;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.social-link:hover {
+    background: #001f4d;
+    color: #fff;
+}
+.social-link .fa-linkedin {
+    color: #0A66C2;
+}
+.social-link .fa-facebook {
+    color: #1877F3;
+}
+.social-link .fa-envelope {
+    color: #EA4335;
+}
 /* Learn More Button Styling */
 .view-service-btn, .view-about-btn, .view-product-btn {
     background: #001f4d;
@@ -63,18 +404,19 @@
 
 body {
     margin: 0;
-    background: #fff;
-    color: #001f4d;
+    background: #f6fcfa;
+    color: #256d5a;
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button, li, ul, nav, main, header, footer, .product-card, .story, .talent-card {
     font-family: 'Inter', Arial, sans-serif;
 }
+
 header {
-    background: #fff;
-    color: #001f4d;
+    background: #e3f9f3;
+    color: #256d5a;
     padding: 1em 0;
-    border-bottom: 2px solid #001f4d;
+    border-bottom: 2px solid #aee5d8;
 }
 .main-nav {
     display: grid;
@@ -97,7 +439,7 @@ header {
     margin: 0;
 }
 .nav-list li a {
-    color: #001f4d;
+    color: #256d5a;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5em 1em;
@@ -105,17 +447,17 @@ header {
     transition: background 0.2s, color 0.2s;
 }
 .nav-list li a:hover {
-    background: #001f4d;
-    color: #fff;
+    background: #aee5d8;
+    color: #256d5a;
 }
-main {
+.main {
     max-width: 1100px;
     margin: 2em auto;
-    background: #fff;
+    background: #ffffff;
     padding: 2em;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    color: #001f4d;
+    box-shadow: 0 2px 8px rgba(38, 166, 154, 0.08);
+    color: #256d5a;
 }
 .products-section {
     margin-top: 2em;
@@ -127,13 +469,13 @@ main {
     margin-top: 1em;
 }
 .product-card {
-    background: #f4f8ff;
+    background: #e3f9f3;
     border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,31,77,0.07);
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
     padding: 1em;
     text-align: center;
-    color: #001f4d;
-
+    color: #256d5a;
+    border: 1px solid #aee5d8;
 }
 .product-card img {
     width: 100%;
@@ -151,12 +493,13 @@ main {
     margin-top: 1em;
 }
 .story {
-    background: #f4f8ff;
+    background: #f6fcfa;
     border-radius: 8px;
     padding: 1em;
     flex: 1 1 300px;
     min-width: 220px;
-    color: #001f4d;
+    color: #256d5a;
+    border: 1px solid #aee5d8;
 }
 .talents-section {
     margin-top: 2em;
@@ -168,12 +511,13 @@ main {
     margin-top: 1em;
 }
 .talent-card {
-    background: #f4f8ff;
+    background: #e3f9f3;
     border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,31,77,0.07);
+    box-shadow: 0 1px 4px rgba(38, 166, 154, 0.07);
     padding: 1em;
     text-align: center;
-    color: #001f4d;
+    color: #256d5a;
+    border: 1px solid #aee5d8;
 }
 .talent-card img {
     width: 100%;
@@ -184,9 +528,9 @@ main {
 footer {
     text-align: center;
     padding: 1em 0;
-    background: #fff;
-    color: #001f4d;
-    border-top: 2px solid #001f4d;
+    background: #e3f9f3;
+    color: #256d5a;
+    border-top: 2px solid #aee5d8;
     position: fixed;
     width: 100%;
     bottom: 0;
