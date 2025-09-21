@@ -1,3 +1,26 @@
+    .service-card, .product-card, .talent-card, .story, .about-section {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(38, 166, 154, 0.13);
+        padding: 1.5em 1em;
+        margin-bottom: 2em;
+        border: none;
+    }
+    .view-service-btn, .view-about-btn, .view-product-btn {
+        transition: transform 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .view-service-btn:active, .view-about-btn:active, .view-product-btn:active {
+        transform: scale(0.96);
+        background: #38b2ac;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(38, 166, 154, 0.18);
+    }
+    .view-service-btn:hover, .view-about-btn:hover, .view-product-btn:hover {
+        transform: scale(1.04);
+        background: #256d5a;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(38, 166, 154, 0.22);
+    }
 /* Highlight talents section when navigated from about.html */
 .highlight-talent {
     box-shadow: 0 0 0 4px #38b2ac;
