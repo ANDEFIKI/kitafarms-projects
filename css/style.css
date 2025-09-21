@@ -12,16 +12,16 @@ body {
 }
 
 .nav-list {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 2000; /* Ensure nav-list is above all content */
-    gap: 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: row;
+    background: none;
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    z-index: auto;
+    gap: 2em;
+    box-shadow: none;
 }
 html, body, h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button, li, ul, nav, main, header, footer, .product-card, .story, .talent-card {
     font-family: 'Inter', Arial, sans-serif;
@@ -42,6 +42,7 @@ header {
 }
 .hamburger {
     display: none;
+    /* Only show hamburger on mobile */
 }
 .nav-list {
     list-style: none;
@@ -585,9 +586,9 @@ footer {
     nav .hamburger span {
         display: block;
         height: 4px;
-        width: 100%;
+        width: 28px;
         background: #001f4d;
-        margin: 12px 0;
+        margin: 6px 0;
         border-radius: 2px;
         transition: 0.4s;
     }
@@ -601,13 +602,14 @@ footer {
         width: 100%;
         z-index: 1001; /* Ensure nav-list is below hamburger */
         gap: 0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
     .nav-list.active {
         display: flex;
     }
     .nav-list li a {
-        padding: 1em;
+        padding: 2.2em 1em;
         border-radius: 0;
         border-bottom: 1px solid #001f4d;
     }
-}
+    }
