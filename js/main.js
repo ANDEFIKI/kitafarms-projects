@@ -76,6 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 navList.classList.remove('active');
             }
         });
+            // Improve mobile dropdown usability: close menu after link click
+            var navLinks = navList.querySelectorAll('a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 600) {
+                        // Prevent accidental overlap: close menu and scroll link into view
+                        navList.classList.remove('active');
+                        setTimeout(function() {
+                            link.blur();
+                        }, 100);
+                    }
+                });
+            });
     }
 
     // Make product cards interactive on index.html

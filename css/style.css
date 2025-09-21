@@ -555,13 +555,10 @@ footer {
     .main-nav {
         grid-template-columns: 1fr auto;
         padding: 0 1em;
-    }
     main {
         padding: 1em;
-    }
     .products-grid, .talents-grid {
         grid-template-columns: 1fr;
-    }
     .stories-flex {
         flex-direction: column;
     }
@@ -608,8 +605,15 @@ footer {
         display: flex;
     }
     .nav-list li a {
-        padding: 2.2em 1em;
+        padding: 2.8em 1.2em;
         border-radius: 0;
         border-bottom: 1px solid #001f4d;
+        margin-bottom: 0.8em;
+        font-size: 1.15em;
+        letter-spacing: 0.5px;
+        box-sizing: border-box;
+    }
+    }
+    }
     }
     }
