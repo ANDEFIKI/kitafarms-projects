@@ -11,6 +11,18 @@ body {
     color: #256d5a;
 }
 
+.nav-list {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 2000; /* Ensure nav-list is above all content */
+    gap: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
 html, body, h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button, li, ul, nav, main, header, footer, .product-card, .story, .talent-card {
     font-family: 'Inter', Arial, sans-serif;
 }
@@ -21,7 +33,7 @@ header {
     border-bottom: 2px solid #aee5d8;
 }
 .main-nav {
-    display: grid;
+    z-index: 2100; /* Ensure hamburger is above nav-list */
     grid-template-columns: 1fr auto;
     align-items: center;
     max-width: 1100px;
@@ -569,12 +581,13 @@ footer {
         position: relative;
         z-index: 1002; /* Ensure hamburger is above nav-list */
     }
-    .hamburger span {
+    .hamburger span,
+    nav .hamburger span {
         display: block;
         height: 4px;
         width: 100%;
         background: #001f4d;
-        margin: 7px 0;
+        margin: 12px 0;
         border-radius: 2px;
         transition: 0.4s;
     }
