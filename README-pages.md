@@ -1,4 +1,6 @@
 # Project Pages Overview
+## DEPLOYED ON NEDLIFY
+https://andefikiplp.netlify.app/
 
 This project is a multi-page website for Kitafarms, an innovative agritech company focused on climate-smart farming and grain distribution in Africa. Below is a summary of each page and its purpose:
 
