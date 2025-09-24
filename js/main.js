@@ -69,11 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.addEventListener('click', function(e) {
             e.stopPropagation();
             navList.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
         // Close nav when clicking outside (optional UX)
         document.addEventListener('click', function(e) {
             if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
                 navList.classList.remove('active');
+                hamburger.classList.remove('active');
             }
         });
             // Improve mobile dropdown usability: close menu after link click
@@ -83,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (window.innerWidth <= 600) {
                         // Prevent accidental overlap: close menu and scroll link into view
                         navList.classList.remove('active');
+                        hamburger.classList.remove('active');
                         setTimeout(function() {
                             link.blur();
                         }, 100);
@@ -149,3 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', { grain_type: 'Test', quantity: 1 })
+  .then(console.log, console.error);
